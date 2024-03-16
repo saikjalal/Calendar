@@ -1,12 +1,4 @@
 /*
-Saik Jalal
-saj325@lehigh.edu
-CSE264
-Programming Assignment #3
-
-*/
-
-/*
 This does not work
 function initialize() {
     ocument.querySelector('.btn-back');
