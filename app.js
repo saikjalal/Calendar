@@ -1,10 +1,3 @@
-/*
-Saik Jalal
-saj325@lehigh.edu
-CSE264
-Programming Assignment #3
-*/
-
 const express = require("express");
 const path = require("path");
 //const sprintf = require("sprintf-js").sprintf;
