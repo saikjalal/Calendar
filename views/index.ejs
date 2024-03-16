@@ -1,0 +1,68 @@
+<!--
+  Saik Jalal
+  saj325@lehigh.edu
+  CSE264
+  Programming Assignment #3
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Calendar</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/styles/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <table>
+      <!-- moving back and forth months -->
+      <tr>
+        <th class="btn"><a href="/backyear">&lt;&lt;</a></th>
+        <th class="btn"><a href="/backmonth">&lt;</a></th>
+        <th class="title" colspan="3"> <%= date.month %> <%= date.year %> </th>
+        <th class="btn"><a href="/forwardmonth">&gt;</a></th>
+        <th class="btn"><a href="forwardyear">&gt;&gt;</a></th>
+      </tr>
+
+      <!-- Display the days of the week -->
+      <tr class="weekSetUp">
+        <% for(var day of weekDays){ %>
+          <th>
+            <%= day %>&nbsp;
+          </th>
+        <% } %>
+      </tr>
+
+      <% 
+        <!--I used february 1, 2024 as a reference. So I wanted that to start on Thursday, and the numbering follows-->
+        var count=1 - (calendar.starting - 1); 
+      %>
+      <!--The numbering for each row on each month grid (think of them as pages)-->
+      <% for(var i=0; i < 6; i++) { %>
+        <tr class="weekRow">
+          <!--through the days of the week-->
+          <% for(var j=0; j < 7; j++) { %>
+            <% if(count>= 1 && count <= calendar.days[calendar.monthNum].length) { %> <!--Takes into account the number of days in each month when assigned -->
+              <% 
+                var day=count; <!-- Set up the counter to keep track of numbering-->
+                var istoday=day===today && thcurrentMonth===calendar.monthNum && thcurrentYear===date.year; <!-- logic for check if it is the current date-->
+              %>
+              <!--Check for today GET. If it is the current day, make the background for that cell white -->
+              <td <%= istoday ? 'style="background-color: #FFFF;"' : '' %> >
+                <%= day %>
+              </td>
+            <% } else { %>
+              <!-- handle any cell that is out of range and push it to the next month -->
+              <td></td>
+            <% } %>
+            <% count++; %> <!--Increment the counter-->
+          <% } %>
+        </tr>
+      <% } %>
+    </table>
+  </div>
+  <script src="/scripts/script.js"></script>
+</body>
+
+</html>

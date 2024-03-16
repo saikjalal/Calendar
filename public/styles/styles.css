@@ -1,0 +1,61 @@
+/*
+  Saik Jalal
+  saj325@lehigh.edu
+  CSE264
+  Programming Assignment #3
+*/
+
+/*
+Analagous Color Scheme
+#E65215
+#E69515
+#E67615
+#E62D15
+#E6B115
+#E69F61
+*/
+
+#container{
+    margin: auto;
+    width: 90%;
+    border: 1px solid #E65215;
+    padding: 100px;
+    align-content: center;
+    text-align: center;
+    height: 600px;
+    background-color: #E69715;
+    font-size: 1px;
+}
+
+table{
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border :1px solid;
+    font-size: 28pt;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+td{
+    border-collapse: collapse;
+    border :1px solid;
+    font-size: 28pt;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+
+th{
+    background-color: #E62D15;
+    border-collapse: collapse;
+    border :1px solid;
+    font-size: 28pt;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+tr{
+    background-color: #E6B015;
+    border-collapse: collapse;
+    border :1px solid;
+    font-size: 28pt;
+    font-family:Arial, Helvetica, sans-serif
+}
